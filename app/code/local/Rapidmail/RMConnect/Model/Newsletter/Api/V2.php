@@ -21,7 +21,7 @@ class Rapidmail_RMConnect_Model_Newsletter_Api_V2 extends Mage_Api_Model_Resourc
         $resource = Mage::getSingleton('core/resource');
 
         // Get subscribers
-        $results = $resource->getConnection('core_read')->fetchAll('SELECT * FROM newsletter_subscriber');
+        $results = $resource->getConnection('core_read')->fetchAll('SELECT * FROM ' . $resource->getTableName('newsletter/subscriber'));
 
         return (array)$results;
 
@@ -43,7 +43,7 @@ class Rapidmail_RMConnect_Model_Newsletter_Api_V2 extends Mage_Api_Model_Resourc
         $db = $resource->getConnection('core_write');
 
         // Get subscriber
-        $subscriber = $db->fetchRow('SELECT * FROM ' . $resource->getTableName('newsletter/subscriber') . ' WHERE subscriber_email = "' . $db->quote($email) . '" LIMIT 1');
+        $subscriber = $db->fetchRow('SELECT * FROM ' . $resource->getTableName('newsletter/subscriber') . ' WHERE subscriber_email = ' . $db->quote($email) . ' LIMIT 1');
 
         if (!$subscriber) {
             return 404;
