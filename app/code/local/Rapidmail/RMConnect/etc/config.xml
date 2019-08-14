@@ -14,7 +14,7 @@
 <config>
     <modules>
         <Rapidmail_RMConnect>
-            <version>1.0.0</version>
+            <version>1.3.0</version>
         </Rapidmail_RMConnect>
     </modules>
     <global>
@@ -23,6 +23,7 @@
                 <rewrite>
                     <newsletter_api_v2>Rapidmail_RMConnect_Model_Newsletter_Api_V2</newsletter_api_v2>
                     <catalog_api_v2>Rapidmail_RMConnect_Model_Catalog_Api_V2</catalog_api_v2>
+                    <version_api_v2>Rapidmail_RMConnect_Model_Version_Api_V2</version_api_v2>
                 </rewrite>
             </rmconnect>
         </models>

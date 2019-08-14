@@ -48,6 +48,21 @@
                 </complexContent>
             </complexType>
 
+            <complexType name="shopVersionEntity">
+                <all>
+                    <element name="shop_version" type="xsd:string" minOccurs="0"/>
+                    <element name="shop_edition" type="xsd:string" minOccurs="0"/>
+                    <element name="extension_version" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="ArrayOfShopVersionEntity">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:shopVersionEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+
         </schema>
     </types>
 
@@ -72,6 +87,13 @@
     </message>
     <message name="rmconnectCatalogProductListResponse">
         <part name="result" type="typens:ArrayOfCatalogProductExtEntity"/>
+    </message>
+
+    <message name="rmconnectVersionShopVersionRequest">
+        <part name="sessionId" type="xsd:string"/>
+    </message>
+    <message name="rmconnectVersionShopVersionResponse">
+        <part name="result" type="typens:ArrayOfShopVersionEntity"/>
     </message>
 
     <portType name="{{var wsdl.handler}}PortType">
@@ -140,11 +162,31 @@
         </operation>
     </binding>
 
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="rmconnectVersionShopVersion">
+            <documentation>Returns shop version informations</documentation>
+            <input message="typens:rmconnectVersionShopVersionRequest"/>
+            <output message="typens:rmconnectVersionShopVersionResponse"/>
+        </operation>
+    </portType>
+    <binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="rmconnectVersionShopVersion">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action"/>
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded"
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded"
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+    </binding>
+
     <service name="{{var wsdl.name}}Service">
         <port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
             <soap:address location="{{var wsdl.url}}"/>
         </port>
     </service>
 </definitions>
-
-

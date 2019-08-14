@@ -13,7 +13,7 @@
 <config>
     <modules>
         <Rapidmail_RMConnect>
-            <version>1.0.0</version>
+            <version>1.3.0</version>
         </Rapidmail_RMConnect>
     </modules>
     <api>
@@ -58,15 +58,35 @@
                 </faults>
             </rmconnect_catalog>
 
+            <rmconnect_version translate="title" module="rmconnect">
+                <model>rmconnect/version_api</model>
+                <title>shop version API Extension</title>
+                <acl>core</acl>
+                <methods>
+                    <shopVersion translate="title" module="rmconnect">
+                        <title>Return shop version</title>
+                        <method>shopVersion</method>
+                    </shopVersion>
+                </methods>
+                <faults module="rmconnect">
+                    <store_not_exists>
+                        <code>100</code>
+                        <message>Requested store view not found.</message>
+                    </store_not_exists>
+                </faults>
+            </rmconnect_version>
+
         </resources>
         <resources_alias>
             <rmconnect_newsletter>rmconnect_newsletter</rmconnect_newsletter>
             <rmconnect_catalog>rmconnect_catalog</rmconnect_catalog>
+            <rmconnect_version>rmconnect_version</rmconnect_version>
         </resources_alias>
         <v2>
             <resources_function_prefix>
                 <rmconnect_newsletter>rmconnectNewsletter</rmconnect_newsletter>
                 <rmconnect_catalog>rmconnectCatalog</rmconnect_catalog>
+                <rmconnect_version>rmconnectVersion</rmconnect_version>
             </resources_function_prefix>
         </v2>
         <acl>
