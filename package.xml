@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Rapidmail_RMConnect</name>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
@@ -25,7 +25,7 @@ Consider table prefix getting subscribers, too.</notes>
     <date>2014-03-07</date>
     <time>11:23:49</time>
     <contents>
-        <target name="magelocal">
+        <target name="magecommunity">
             <dir name="Rapidmail">
                 <dir name="RMConnect">
                     <dir name="Model">
