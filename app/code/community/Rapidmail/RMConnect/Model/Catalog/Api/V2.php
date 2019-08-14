@@ -44,7 +44,7 @@ class Rapidmail_RMConnect_Model_Catalog_Api_V2 extends Mage_Api2_Model_Resource
                 'product_id' => $product->getId(),
                 'sku' => $product->getSku(),
                 'name' => $product->getName(),
-                'image' => $product->getImage() != 'no_selection' ? $product->getImage() : '',
+                'image' => $product->getImage() != 'no_selection' ? Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'catalog/product' . $product->getImage() : '',
                 'url_path' => $product->getUrlPath(),
                 'price' => $product->getPrice(),
                 'description' => $product->getDescription(),
