@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Rapidmail_RMConnect</name>
-    <version>1.5.4</version>
+    <version>1.5.5</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
@@ -11,11 +11,11 @@
 &lt;h3&gt;Setup&lt;/h3&gt;&#xD;
 &lt;p&gt;Get the extension key and install the rapidmail Connector.&#xD;
 Also take a look at the &lt;a href="http://doc.rapidmail.net/pages/viewpage.action?pageId=655730"&gt;rapidmail user manual&lt;/a&gt;&lt;/p&gt;</description>
-    <notes>Added firstname and lastname to newsletter subscriber data import.</notes>
+    <notes>Fixed version mismatch</notes>
     <authors><author><name>SK</name><user>auto-generated</user><email>support@rapidmail.de</email></author></authors>
-    <date>2016-05-30</date>
-    <time>13:49:24</time>
-    <contents><target name="magecommunity"><dir name="Rapidmail"><dir name="RMConnect"><dir name="Model"><dir name="Catalog"><file name="Api.php" hash=""/><dir name="Api"><file name="V2.php" hash=""/></dir></dir><dir name="Newsletter"><file name="Api.php" hash=""/><dir name="Api"><file name="V2.php" hash=""/></dir></dir><dir name="Version"><file name="Api.php" hash=""/><dir name="Api"><file name="V2.php" hash=""/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash=""/></dir><dir name="etc"><file name="api.xml" hash=""/><file name="config.xml" hash=""/><file name="wsdl.xml" hash=""/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Rapidmail_RMConnect.xml" hash=""/></dir></target></contents>
+    <date>2017-04-19</date>
+    <time>09:22:10</time>
+    <contents><target name="magecommunity"><dir name="Rapidmail"><dir name="RMConnect"><dir name="Model"><dir name="Catalog"><file name="Api.php" hash="762a8aa7a979ee7a1c926c7614887242"/><dir name="Api"><file name="V2.php" hash="34fe1a011928ab275479c86a263d7256"/></dir></dir><dir name="Newsletter"><file name="Api.php" hash="1050272f5156c6bfe148cd8b4a10a1f8"/><dir name="Api"><file name="V2.php" hash="2c926af883deed93a1d58a25dc045a94"/></dir></dir><dir name="Version"><file name="Api.php" hash="a7949228669397989c785bfceefe6b0e"/><dir name="Api"><file name="V2.php" hash="eda409873b9628a662457af1d7fa7637"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="600e5f49a125b734fd903ae1cf7ed180"/></dir><dir name="etc"><file name="api.xml" hash="7c3d8d378465ff01810fd4a74d4a51f5"/><file name="config.xml" hash="4b03407189aa60756c6b734197498906"/><file name="wsdl.xml" hash="6de1636c6f42fd6483db68672d54b039"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Rapidmail_RMConnect.xml" hash="9eb2fd5f327bdd8faa4e1ed75e201ce6"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.3.0</min><max>7.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.3.0</min><max>8.0.0</max></php></required></dependencies>
 </package>
