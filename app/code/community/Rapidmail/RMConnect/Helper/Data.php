@@ -1,36 +1,26 @@
 <?php
 
 /**
- * Newsletters subscribers API Extension
+ * Data Helper Extension
  *
  * @category   Rapidmail
  * @package    Rapidmail_RMConnect
  */
-
-class Rapidmail_RMConnect_Model_Version_Api_V2 extends Mage_Api_Model_Resource_Abstract
-{
+class Rapidmail_RMConnect_Helper_Data extends Mage_Core_Helper_Abstract {
 
     /**
-     * Returns Shop Version
+     * Get magento shop version info
      *
      * @return array
      */
-    public function shopVersion()
-    {
+    public function getShopVersion() {
 
-        $result = array();
-
-        // Get Shop Version
-
-        $result[] = array(
+        return array(
             'shop_version' => Mage::getVersion(),
             'shop_edition' => Mage::getEdition(),
             'extension_version' => (string)Mage::getConfig()->getModuleConfig('Rapidmail_RMConnect')->version
         );
 
-        return $result;
-
     }
-}
 
-?>
+}

@@ -11,11 +11,6 @@
 
 -->
 <config>
-    <modules>
-        <Rapidmail_RMConnect>
-            <version>1.3.1</version>
-        </Rapidmail_RMConnect>
-    </modules>
     <api>
         <resources>
             <rmconnect_newsletter translate="title" module="rmconnect">
@@ -37,6 +32,18 @@
                         <code>100</code>
                         <message>Requested store view not found.</message>
                     </store_not_exists>
+                    <subscriber_not_exists>
+                        <code>404</code>
+                        <message>Subscriber does not exist.</message>
+                    </subscriber_not_exists>
+                    <subscriber_invalid_status>
+                        <code>400</code>
+                        <message>Invalid status specified.</message>
+                    </subscriber_invalid_status>
+                    <status_save_failed>
+                        <code>500</code>
+                        <message>Saving new status failed.</message>
+                    </status_save_failed>
                 </faults>
             </rmconnect_newsletter>
 
