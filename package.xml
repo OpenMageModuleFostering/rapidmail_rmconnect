@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Rapidmail_RMConnect</name>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
@@ -12,11 +12,10 @@
 &lt;p&gt;Get the extension key and install the rapidmail Connector.&lt;br /&gt;&#xD;
 Also take a look at the &lt;a href="http://doc.rapidmail.net/pages/viewpage.action?pageId=655730"&gt;rapidmail user manual&lt;/a&gt;&#xD;
 &lt;/p&gt;</description>
-    <notes>- Respect magento model structure when updating substriber status.&#xD;
-- Improve performance when loading product list.</notes>
+    <notes>- Fix detection of magento product URLs when using external CDN or non-default internal path</notes>
     <authors><author><name>JW</name><user>auto-generated</user><email>support@rapidmail.de</email></author></authors>
-    <date>2015-02-03</date>
-    <time>07:03:21</time>
+    <date>2015-04-24</date>
+    <time>06:25:39</time>
     <contents><target name="magecommunity"><dir name="Rapidmail"><dir name="RMConnect"><dir name="Helper"><file name="Data.php" hash="ff7f4cafbcd0cd69f0346a549b3cd258"/></dir><dir name="Model"><dir name="Catalog"><dir name="Api"><file name="V2.php" hash="7a718309365cda0c664ff5d0211d6421"/></dir><file name="Api.php" hash="78966a1f4415bbd81f70c6934995298b"/></dir><dir name="Newsletter"><dir name="Api"><file name="V2.php" hash="6e906cc4a3b5aaa74bf874ddcc860ec0"/></dir><file name="Api.php" hash="5ded9126ed258199f1cd7102bf49ba27"/></dir><dir name="Version"><dir name="Api"><file name="V2.php" hash="385519637bf7a18a87c782553fc2a619"/></dir><file name="Api.php" hash="f241de12a10eb41f6f9ba9de541e2f4e"/></dir></dir><dir name="etc"><file name="api.xml" hash="7fb66663b48ce6bf256b2be009f8050c"/><file name="config.xml" hash="69ae12e483d484a66472fb9b13e65657"/><file name="wsdl.xml" hash="83cb4436cfd2b5a498b47546421b3b47"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Rapidmail_RMConnect.xml" hash="afb873876a84dcc29e30b2b46bd9c182"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>6.0.0.</max></php></required></dependencies>
