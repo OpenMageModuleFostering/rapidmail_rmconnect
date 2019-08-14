@@ -14,7 +14,7 @@
 <config>
     <modules>
         <Rapidmail_RMConnect>
-            <version>1.3.0</version>
+            <version>1.3.1</version>
         </Rapidmail_RMConnect>
     </modules>
     <global>
@@ -27,5 +27,10 @@
                 </rewrite>
             </rmconnect>
         </models>
+        <helpers>
+            <rmconnect>
+                <class>Rapidmail_RMConnect_Helper</class>
+            </rmconnect>
+        </helpers>
     </global>
 </config>
