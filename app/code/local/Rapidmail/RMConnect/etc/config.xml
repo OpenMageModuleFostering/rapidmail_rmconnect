@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!--
+
+/**
+ * Newsletters subscribers API Extension
+ *
+ * @category   Rapidmail
+ * @package    Rapidmail_RMConnect
+ */
+
+-->
+
+<config>
+    <modules>
+        <Rapidmail_RMConnect>
+            <version>1.0.0</version>
+        </Rapidmail_RMConnect>
+    </modules>
+    <global>
+        <models>
+            <rmconnect>
+                <rewrite>
+                    <newsletter_api_v2>Rapidmail_RMConnect_Model_Newsletter_Api_V2</newsletter_api_v2>
+                    <catalog_api_v2>Rapidmail_RMConnect_Model_Catalog_Api_V2</catalog_api_v2>
+                </rewrite>
+            </rmconnect>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<!--
+
+/**
+ * Newsletters subscribers API Extension
+ *
+ * @category   Rapidmail
+ * @package    Rapidmail_RMConnect
+ */
+
+-->
+<config>
+    <modules>
+        <Rapidmail_RMConnect>
+            <version>1.0.0</version>
+        </Rapidmail_RMConnect>
+    </modules>
+    <api>
+        <resources>
+            <rmconnect_newsletter translate="title" module="rmconnect">
+                <model>rmconnect/newsletter_api</model>
+                <title>Newsletter subscribers API Extension</title>
+                <acl>customer/info</acl>
+                <methods>
+                    <subscriberList translate="title" module="rmconnect">
+                        <title>Return subscribers</title>
+                        <method>subscriberList</method>
+                    </subscriberList>
+                    <subscriberUpdateStatus translate="title" module="rmconnect">
+                        <title>Update subscriber</title>
+                        <method>subscriberUpdateStatus</method>
+                    </subscriberUpdateStatus>
+                </methods>
+                <faults module="rmconnect">
+                    <store_not_exists>
+                        <code>100</code>
+                        <message>Requested store view not found.</message>
+                    </store_not_exists>
+                </faults>
+            </rmconnect_newsletter>
+
+            <rmconnect_catalog translate="title" module="rmconnect">
+                <model>rmconnect/catalog_api</model>
+                <title>Catalog API Extension</title>
+                <acl>catalog/product/info</acl>
+                <methods>
+                    <productList translate="title" module="rmconnect">
+                        <title>Return products</title>
+                        <method>productList</method>
+                    </productList>
+                </methods>
+                <faults module="rmconnect">
+                    <store_not_exists>
+                        <code>100</code>
+                        <message>Requested store view not found.</message>
+                    </store_not_exists>
+                </faults>
+            </rmconnect_catalog>
+
+        </resources>
+        <resources_alias>
+            <rmconnect_newsletter>rmconnect_newsletter</rmconnect_newsletter>
+            <rmconnect_catalog>rmconnect_catalog</rmconnect_catalog>
+        </resources_alias>
+        <v2>
+            <resources_function_prefix>
+                <rmconnect_newsletter>rmconnectNewsletter</rmconnect_newsletter>
+                <rmconnect_catalog>rmconnectCatalog</rmconnect_catalog>
+            </resources_function_prefix>
+        </v2>
+        <acl>
+            <resources>
+                <all>
+                </all>
+            </resources>
+        </acl>
+    </api>
+</config>

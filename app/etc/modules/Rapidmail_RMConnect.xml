@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!--
+/**
+ * Newsletters subscribers API Extension
+ *
+ * @category   Rapidmail
+ * @package    Rapidmail_RMConnect
+ */
+
+-->
+<config>
+    <modules>
+        <Rapidmail_RMConnect>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Api />
+            </depends>
+            <version>1.0.0</version>
+        </Rapidmail_RMConnect>
+    </modules>
+</config>
+
