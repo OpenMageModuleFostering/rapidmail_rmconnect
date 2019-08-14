@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Rapidmail_RMConnect</name>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
@@ -22,8 +22,8 @@ Consider table prefix getting subscribers, too.</notes>
             <email>support@rapidmail.de</email>
         </author>
     </authors>
-    <date>2014-03-07</date>
-    <time>11:23:49</time>
+    <date>2015-09-28</date>
+    <time>13:37:32</time>
     <contents>
         <target name="magecommunity">
             <dir name="Rapidmail">

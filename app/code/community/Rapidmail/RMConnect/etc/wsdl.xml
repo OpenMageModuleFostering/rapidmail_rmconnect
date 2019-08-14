@@ -34,6 +34,9 @@
                     <element name="image" type="xsd:string" minOccurs="0"/>
                     <element name="url_path" type="xsd:string" minOccurs="0"/>
                     <element name="price" type="xsd:double" minOccurs="0"/>
+                    <element name="special_price" type="xsd:double" minOccurs="0"/>
+                    <element name="special_from_date" type="xsd:string" minOccurs="0"/>
+                    <element name="special_to_date" type="xsd:string" minOccurs="0"/>
                     <element name="description" type="xsd:string" minOccurs="0"/>
                     <element name="short_description" type="xsd:string" minOccurs="0"/>
                     <element name="created_at" type="xsd:string" minOccurs="0"/>
