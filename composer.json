@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Rapidmail_RMConnect",
+    "name": "OpenMageModuleFostering\/Rapidmail_RMConnect",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
     "description": "Connects your magento shop with rapidmail.",
     "authors": [
-    {
-        "name": "SK",
-        "email": "support@rapidmail.de"
-    }
-],
+        {
+            "name": "SK",
+            "email": "support@rapidmail.de"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
